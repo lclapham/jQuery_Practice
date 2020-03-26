@@ -1,9 +1,36 @@
+//Lesson #5
 //$('#lead-banner p');
 
-$('h3').css({border: "3px solid blue"});
+//$('h3').css({border: "3px solid blue"});
 
-$('.wrapper').css({border: "3px solid red"});
+//$('.wrapper').css({border: "3px solid red"});
 
-document.getElementById("logo").style.color = "red";
+//$('#clients').css({border: "3px solid yellow"});
 
-$('#clients').css({border: "3px solid yellow"});
+// Lesson #6
+// jQuery Filters
+
+//$("header nav li:first").css({border: "2px  solid red"});
+//$("header nav li:last").css({border: "2px  solid red"});
+
+// Some other examples could be li:even, or li:first-child, li:odd.
+
+//$("section:not('#contact')").css({border: "3px solid green"});
+
+//$("#social-nav li:lt(3)").css({border: "2px solid green"});
+//$("#social-nav li:gt(2)").css({border: "2px solid red"});
+
+//Get every div that has a class. This called an attribtue filter
+
+//$("div[class]")
+
+//Attribute filter with attribute equalling something
+
+//$("img[alt=quote")
+
+//Lesson 7 working with DOM
+//This one will grap the next element after #contact-methods
+//$("#contact-methods").next().css({border: "2px solid blue"});
+
+// You could also do previous, which would get the element before the element you specific
+$("#social-nav").prev().css({border: "2px solid blue"});
