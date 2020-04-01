@@ -200,3 +200,16 @@ $("#lead-banner").click(function(){  // this is the same as .on("click", functio
 // $(window).load(function (){
 
 // })
+
+// Lesson 18 Event Object
+
+$(document).ready(function (){
+
+    $("*").on("click",function(e){
+        console.log(e.target);
+        console.log("X coordinate of the event is: " + e.pageX);
+        console.log("Y coordinate of the event is: " + e.pageY);
+        console.log("The event type is " + e.type);
+        e.stopPropagation();
+    })
+}) 
