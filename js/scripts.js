@@ -163,14 +163,14 @@ off() - unbinds event from matched elements
 
 let myLis = $("#points-of-sale li");
 
-myLis.on("click", function() {
-    $(this).css({"background": "pink" })
+myLis.on("click", function () {
+    $(this).css({ "background": "pink" })
     myLis.off("click");
 });
 
 /* Lesson 16 Event Helpers*/
 
-$("#lead-banner").click(function(){  // this is the same as .on("click", function()
+$("#lead-banner").click(function () {  // this is the same as .on("click", function()
     alert("You clicked me");
     $(this).off("click");
 });
@@ -203,16 +203,16 @@ $("#lead-banner").click(function(){  // this is the same as .on("click", functio
 
 // Lesson 18 Event Object
 
-$(document).ready(function (){
+$(document).ready(function () {
 
-    $("*").on("click",function(e){
+    $("*").on("click", function (e) {
         console.log(e.target);
         console.log("X coordinate of the event is: " + e.pageX);
         console.log("Y coordinate of the event is: " + e.pageY);
         console.log("The event type is " + e.type);
         e.stopPropagation();
     });
-}); 
+});
 
 //Lesson 19 Animations
 //This is the animate method. This only works on elements with numeric values.
@@ -226,13 +226,33 @@ $(document).ready(function (){
 // })
 
 // this is the same as above only cleaner
-$(document).ready(function (){
+// $(document).ready(function (){
 
-    function complete(){
+//     function complete(){
+//         alert("Animation complete!")
+//     };
+
+//     $("section > h2").on("click",function(){
+//         $(this).animate({"width":"500px", "height": "100px"}, 1000, "linear", complete);
+//     })
+// })
+
+
+// Lesson 20 Fading elements
+$(document).ready(function () {
+
+    function complete() {
         alert("Animation complete!")
     };
 
-    $("section > h2").on("click",function(){
-        $(this).animate({"width":"500px", "height": "100px"}, 1000, "linear", complete);
+    $("section > h2").on("click", function () {
+        // $(this).fadeOut(2000).fadeIn(500);
+        //$(this).fadeTo(1000, 0.2);
+        $(this).fadeTo(200, 0.2)  // Creates a little flashing type effect.
+            .fadeTo(200, 0.8)
+            .fadeTo(200, 0.2)
+            .fadeTo(200, 0.8)
+            .fadeTo(200, 0.2)
+            .fadeTo(200, 0.8);
     })
 })
