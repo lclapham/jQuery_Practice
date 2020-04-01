@@ -239,20 +239,30 @@ $(document).ready(function () {
 
 
 // Lesson 20 Fading elements
+// $(document).ready(function () {
+
+//     function complete() {
+//         alert("Animation complete!")
+//     };
+
+//     $("section > h2").on("click", function () {
+//         // $(this).fadeOut(2000).fadeIn(500);
+//         //$(this).fadeTo(1000, 0.2);
+//         $(this).fadeTo(200, 0.2)  // Creates a little flashing type effect.
+//             .fadeTo(200, 0.8)
+//             .fadeTo(200, 0.2)
+//             .fadeTo(200, 0.8)
+//             .fadeTo(200, 0.2)
+//             .fadeTo(200, 0.8);
+//     })
+// })
+
+//Lesson 21 Hide, show and toggle.
+
 $(document).ready(function () {
 
-    function complete() {
-        alert("Animation complete!")
-    };
-
-    $("section > h2").on("click", function () {
-        // $(this).fadeOut(2000).fadeIn(500);
-        //$(this).fadeTo(1000, 0.2);
-        $(this).fadeTo(200, 0.2)  // Creates a little flashing type effect.
-            .fadeTo(200, 0.8)
-            .fadeTo(200, 0.2)
-            .fadeTo(200, 0.8)
-            .fadeTo(200, 0.2)
-            .fadeTo(200, 0.8);
+    $("img[alt=map]").on("click", function () {
+       //$(this).hide(1000).show(1000);
+       $("section > h2").toggle(1000);
     })
 })
