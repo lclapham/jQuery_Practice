@@ -268,19 +268,44 @@ $(document).ready(function () {
 // })
 
 // Lesson 22 Sliding Elements slideUp, slideDown.
+// $(document).ready(function () {
+
+//     // $(".slide-button-up").on("click", function () {
+//     //     $("#lead-banner").slideUp(100);
+//     // })
+
+//     // $(".slide-button-down").on("click", function () {
+//     //     $("#lead-banner").slideDown(4000, function(){
+//     //         alert("Animation Complete!")
+//     //     });
+
+//     $(".slide-button-up").on("click", function () {
+//         $("#lead-banner").slideToggle(1000);
+//     })
+
+// })
+
+//Lesson 23  Fading Animation
+
 $(document).ready(function () {
+    let allQuotes = $("blockquote");
+    let currentQuote = 0;
 
-    // $(".slide-button-up").on("click", function () {
-    //     $("#lead-banner").slideUp(100);
-    // })
+    function changeQuote() {
 
-    // $(".slide-button-down").on("click", function () {
-    //     $("#lead-banner").slideDown(4000, function(){
-    //         alert("Animation Complete!")
-    //     });
-    
-    $(".slide-button-up").on("click", function () {
-        $("#lead-banner").slideToggle(1000);
-    })
-    
-})
+        $(allQuotes[currentQuote]).fadeOut(200, function() {
+
+            if (currentQuote == allQuotes.length - 1) {
+                currentQuote = 0;
+            } else {
+                currentQuote++;
+            }
+
+            $(allQuotes[currentQuote]).fadeIn(200);
+        
+        });
+    }
+
+let quoteTimer = setInterval(changeQuote, 3000);
+
+});
