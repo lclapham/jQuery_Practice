@@ -211,5 +211,28 @@ $(document).ready(function (){
         console.log("Y coordinate of the event is: " + e.pageY);
         console.log("The event type is " + e.type);
         e.stopPropagation();
+    });
+}); 
+
+//Lesson 19 Animations
+//This is the animate method. This only works on elements with numeric values.
+// $(document).ready(function (){
+
+//     $("section > h2").on("click",function(){
+//         $(this).animate({"width":"500px", "height": "100px"}, 1000, "linear", function(){
+//             alert("Animation complete!")
+//         })
+//     })
+// })
+
+// this is the same as above only cleaner
+$(document).ready(function (){
+
+    function complete(){
+        alert("Animation complete!")
+    };
+
+    $("section > h2").on("click",function(){
+        $(this).animate({"width":"500px", "height": "100px"}, 1000, "linear", complete);
     })
-}) 
+})
