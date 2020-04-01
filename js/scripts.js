@@ -259,10 +259,28 @@ $(document).ready(function () {
 
 //Lesson 21 Hide, show and toggle.
 
+// $(document).ready(function () {
+
+//     $("img[alt=map]").on("click", function () {
+//        //$(this).hide(1000).show(1000);
+//        $("section > h2").toggle(1000);
+//     })
+// })
+
+// Lesson 22 Sliding Elements slideUp, slideDown.
 $(document).ready(function () {
 
-    $("img[alt=map]").on("click", function () {
-       //$(this).hide(1000).show(1000);
-       $("section > h2").toggle(1000);
+    // $(".slide-button-up").on("click", function () {
+    //     $("#lead-banner").slideUp(100);
+    // })
+
+    // $(".slide-button-down").on("click", function () {
+    //     $("#lead-banner").slideDown(4000, function(){
+    //         alert("Animation Complete!")
+    //     });
+    
+    $(".slide-button-up").on("click", function () {
+        $("#lead-banner").slideToggle(1000);
     })
+    
 })
