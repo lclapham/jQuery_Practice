@@ -49,5 +49,154 @@
 //$("#contact").find(".facebook").css({border: "2px solid blue"});
 
 //This will find the element with a clsss of "wrapper closest to the element ID="social-nav". It moves up the DOM to find it
-$("#social-nav").closest(".wrapper").css({border: "3px solid red"});
+//$("#social-nav").closest(".wrapper").css({border: "3px solid red"});
 
+
+//Chaining
+
+//$("#contact-methods").css({border: "2px solid red"}).next().css({border: "2px solid green"}).closest("section").css({border: "2px solid blue"});
+
+//Lesson 9 adding content to page
+/*var tweet = "<div style='margin: 20px 0; padding: 10px; background:#eee'>The big fight live: Ham vs Cheese! </div>";
+
+$("#tweets div p").text(tweet);
+*/
+
+/* Adding and changing content
+.append()   adds content to bottom of the element
+.prepend()  adds content to top of element
+.before()   adds content before element
+.after()    adds content after element
+.html()     changes the wole html of the element
+.text()     changes the text of an element.
+
+*/
+
+//wrap and unwrap Lesson 10
+/* wrap() - wraps all matched elments indivdually
+unwarp() - unwraps all matched elements
+warpall() - wraps all elements combined with  1 single element.
+
+*/
+//$("section").wrap("<div>")
+//$("section").unwrap()
+//$("section").wrapAll("<div>")
+/*let wrapper = "<div class='wrapper'>";
+let button = $('.button');
+let wrapped = true;
+button[0].onclick = function () {
+    if (wrapped) {
+        $("section").unwrap();
+        wrapped = false;
+        button.text("Wrap");
+    } else {
+        $("section").wrapAll(wrapper)
+        wrapped = true;
+        button.text("Unwrap");
+
+    }
+}
+*/
+
+// Lesson 11 Removing content
+//$(".button").empty();
+//$(".button").remove();
+
+// Lesson 12 changing attributes
+/*
+.removeAttr() - removes an attribute completely
+.att() - can read or set and attribute.
+
+*/
+
+//$("#contact img").removeAttr("alt");
+// This one actually inputs the second value in the attribute. $("#contact img").attr("alt", "location");
+//console.log($("#contact img").attr("alt"));
+
+/* Lesson 13 controllling css 
+
+*/
+
+//$("#social-nav").css("top", "-200px").css("left", "100px");
+/*
+let myObject = {
+    "height": "40",
+    "speed" : "100"
+}
+
+$("#social-nav").css({
+    "top": "-400px",
+    "left" : "150px",
+    "opacity" : "0.5",
+    "border-top": "4px solid red"
+});
+
+*/
+
+//Lesson #14 working with classes
+/*
+removeClass() - removes class form matched elemets
+addClass() - adds a class to the matched elements
+toggleClass - toggles the class on an off on the matched elements
+*/
+
+//$("header .wrapper").removeClass("wrapper");
+//s$("header > div").addClass("wrapper");
+
+let button = $("#lead-banner a");
+
+button[0].onclick = function () {
+    $("#points-of-sale").toggleClass("open");
+    return false;
+}
+
+
+
+// Lesson 15 binding events
+
+/* 
+on() - binds an event to matched elemets
+off() - unbinds event from matched elements
+
+*/
+
+
+let myLis = $("#points-of-sale li");
+
+myLis.on("click", function() {
+    $(this).css({"background": "pink" })
+    myLis.off("click");
+});
+
+/* Lesson 16 Event Helpers*/
+
+$("#lead-banner").click(function(){  // this is the same as .on("click", function()
+    alert("You clicked me");
+    $(this).off("click");
+});
+
+/* Lesson 17 Document load events */
+//These three are document ready
+// $(document).on("ready", function() {
+
+// })
+
+// This is the Same as above.
+// $(document).ready(function(){
+
+// })
+
+// Even shorter yet
+// $(function(){
+
+// })
+
+
+// This is the window ready method
+// $(window).on("load", function(){
+
+// })
+
+// $(window).load(function (){
+
+// })

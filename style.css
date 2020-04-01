@@ -250,7 +250,7 @@ section#points-of-sale ul{
     padding-top: 30px
 }
 
-#clients h2, #contact h2{
+#clients h2, #contact h2, #tweets h2{
     background: green;
     color: #fff;
     padding: 8px;
@@ -351,7 +351,9 @@ section#points-of-sale ul{
     height: 100%;
 }
 
-
+.open {
+    height: auto !important;
+}
 
 
 
