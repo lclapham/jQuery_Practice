@@ -4,6 +4,9 @@
 <head>
     <title>Green Design</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -41,11 +44,12 @@
         <div class="slide-button-down">Slide Down</div>
 
 
-<div class="button" style="text-align: center; padding: 10px; background: orange;">Unwrap</div>
+        <div class="button" style="text-align: center; padding: 10px; background: orange;">Unwrap</div>
 
 
         <div class="wrapper">
-            <section id="points-of-sale" > <!--Add this if you want to hide style="height: 0; overflow: hidden-->
+            <section id="points-of-sale">
+                <!--Add this if you want to hide style="height: 0; overflow: hidden-->
                 <h2>Points of Sale</h2>
                 <ul>
                     <li>
@@ -74,10 +78,20 @@
             <section id="clients">
                 <h2>What Our Clients Say</h2>
                 <img src="images/head.png" alt="quote">
-                <blockquote>quatis alique mos et aut occae cum, veliquaspit quo quam, si idem reprorisqui doluptatur
-                    accum si sunt ut officiisto enecab id et aut es et l</blockquote>
-                    <blockquote>Laborum asperiores cum quo voluptate totam consectetur beatae unde explicabo?</blockquote>
-                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed totam, animi sit nostrum veniam id?</blockquote>
+                <ul class="rslides">
+                    <li>
+                        <blockquote>quatis alique mos et aut occae cum, veliquaspit quo quam, si idem reprorisqui
+                            doluptaturaccum si sunt ut officiisto enecab id et aut es et l</blockquote>
+                    </li>
+                    <li>
+                        <blockquote>Laborum asperiores cum quo voluptate totam consectetur beatae unde explicabo?
+                        </blockquote>
+                    </li>
+                    <li>
+                        <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed totam, animi sit
+                            nostrum veniamid?</blockquote>
+                    </li>
+                </ul>
             </section>
             <section id="contact">
                 <h2>Drop Us A Line</h2>
@@ -100,17 +114,16 @@
             </section>
             <section id="tweets">
                 <h2>Latest Tweets</h2>
-                    <div>
-                        <p>For all tweets, check out our Twitter</p>
+                <div>
+                    <p>For all tweets, check out our Twitter</p>
 
-                    </div>
-                
+                </div>
+
             </section>
         </div>
 
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
+
 </body>
 
 </html>

@@ -321,3 +321,12 @@ $(document).ready(function () {
     })
     
 });
+
+// Lesson 25 Jquery plugins
+
+$(document).ready(function () {
+   
+        $(".rslides").responsiveSlides();
+   
+
+});
