@@ -330,3 +330,31 @@ $(document).ready(function () {
    
 
 });
+
+
+// Lesson 26
+// Checkout:
+/*
+datepickers
+draggable elements
+sortable elements
+resizable elements
+
+sliders
+tooltips
+expandable lists
+image galleries
+
+
+AJAX  asynchronnous javascript and xml
+used to commuicated with a server and load data into a page without refreshing
+    -google maps
+    -traffic updates
+    
+
+
+
+
+
+
+*/
