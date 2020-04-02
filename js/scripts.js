@@ -81,22 +81,22 @@ warpall() - wraps all elements combined with  1 single element.
 //$("section").wrap("<div>")
 //$("section").unwrap()
 //$("section").wrapAll("<div>")
-/*let wrapper = "<div class='wrapper'>";
-let button = $('.button');
-let wrapped = true;
-button[0].onclick = function () {
-    if (wrapped) {
-        $("section").unwrap();
-        wrapped = false;
-        button.text("Wrap");
-    } else {
-        $("section").wrapAll(wrapper)
-        wrapped = true;
-        button.text("Unwrap");
+// let wrapper = "<div class='wrapper'>";
+// let button = $('.button');
+// let wrapped = true;
+// button[0].onclick = function () {
+//     if (wrapped) {
+//         $("section").unwrap();
+//         wrapped = false;
+//         button.text("Wrap");
+//     } else {
+//         $("section").wrapAll(wrapper)
+//         wrapped = true;
+//         button.text("Unwrap");
 
-    }
-}
-*/
+//     }
+// }
+
 
 // Lesson 11 Removing content
 //$(".button").empty();
@@ -143,12 +143,12 @@ toggleClass - toggles the class on an off on the matched elements
 //$("header .wrapper").removeClass("wrapper");
 //s$("header > div").addClass("wrapper");
 
-let button = $("#lead-banner a");
+// let button = $("#lead-banner a");
 
-button[0].onclick = function () {
-    $("#points-of-sale").toggleClass("open");
-    return false;
-}
+// button[0].onclick = function () {
+//     $("#points-of-sale").toggleClass("open");
+//     return false;
+// }
 
 
 
@@ -161,19 +161,19 @@ off() - unbinds event from matched elements
 */
 
 
-let myLis = $("#points-of-sale li");
+// let myLis = $("#points-of-sale li");
 
-myLis.on("click", function () {
-    $(this).css({ "background": "pink" })
-    myLis.off("click");
-});
+// myLis.on("click", function () {
+//     $(this).css({ "background": "pink" })
+//     myLis.off("click");
+// });
 
-/* Lesson 16 Event Helpers*/
+// /* Lesson 16 Event Helpers*/
 
-$("#lead-banner").click(function () {  // this is the same as .on("click", function()
-    alert("You clicked me");
-    $(this).off("click");
-});
+// $("#lead-banner").click(function () {  // this is the same as .on("click", function()
+//     alert("You clicked me");
+//     $(this).off("click");
+// });
 
 /* Lesson 17 Document load events */
 //These three are document ready
@@ -203,16 +203,16 @@ $("#lead-banner").click(function () {  // this is the same as .on("click", funct
 
 // Lesson 18 Event Object
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-    $("*").on("click", function (e) {
-        console.log(e.target);
-        console.log("X coordinate of the event is: " + e.pageX);
-        console.log("Y coordinate of the event is: " + e.pageY);
-        console.log("The event type is " + e.type);
-        e.stopPropagation();
-    });
-});
+//     $("*").on("click", function (e) {
+//         console.log(e.target);
+//         console.log("X coordinate of the event is: " + e.pageX);
+//         console.log("Y coordinate of the event is: " + e.pageY);
+//         console.log("The event type is " + e.type);
+//         e.stopPropagation();
+//     });
+// });
 
 //Lesson 19 Animations
 //This is the animate method. This only works on elements with numeric values.
@@ -287,25 +287,37 @@ $(document).ready(function () {
 
 //Lesson 23  Fading Animation
 
-$(document).ready(function () {
-    let allQuotes = $("blockquote");
-    let currentQuote = 0;
+// $(document).ready(function () {
+//     let allQuotes = $("blockquote");
+//     let currentQuote = 0;
 
-    function changeQuote() {
+//     function changeQuote() {
 
-        $(allQuotes[currentQuote]).fadeOut(200, function() {
+//         $(allQuotes[currentQuote]).fadeOut(200, function() {
 
-            if (currentQuote == allQuotes.length - 1) {
-                currentQuote = 0;
-            } else {
-                currentQuote++;
-            }
+//             if (currentQuote == allQuotes.length - 1) {
+//                 currentQuote = 0;
+//             } else {
+//                 currentQuote++;
+//             }
 
-            $(allQuotes[currentQuote]).fadeIn(200);
+//             $(allQuotes[currentQuote]).fadeIn(200);
         
-        });
-    }
+//         });
+//     }
 
-let quoteTimer = setInterval(changeQuote, 3000);
+// let quoteTimer = setInterval(changeQuote, 3000);
 
+// });
+
+// Lesson 24 a slide toggle animation
+
+
+$(document).ready(function () {
+    let items = $("#points-of-sale li");
+
+    items.on("click", function(){
+        $(this).find("p").slideToggle(500);
+    })
+    
 });
